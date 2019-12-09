@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/shared/options.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/props.css" />
+<div>
+    <div class="card card-body" style="background-color:black">
+        <div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 player">
+                        <div class="card-header bg-white" ><b>JOGADOR 1</b></div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="form-group col-md-7">
+                                    <label>Nome</label>
+                                    <input class="form-control" type="text" id="txtname1" />
+                                </div>
+                                <div class="form-group col-md-7">
+                                    <label>Ação</label>
+                                    <input class="form-control" type="radio" name="player1" id="rock1" />
+                                    <label class="label" for="rock1"><img src="~/img/rock.png" alt=""></label>
+                                    <input class="" type="radio" name="player1" id="paper1" />
+                                    <label class="label" for="paper1"><img src="~/img/paper.png" alt=""></label>
+                                    <input class="" type="radio" name="player1" id="scissors1" />
+                                    <label class="label" for="scissors1"><img src="~/img/scissors.png" alt=""></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 player">
+                        <div class="card-header bg-white"><b>JOGADOR 2</b> </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="form-group col-md-7">
+                                    <label>Nome</label>
+                                    <input class="form-control" type="text" id="txtname2"/>
+                                </div>
+                                <div class="form-group col-md-7">
+                                    <label>Ação</label>
+                                    <input class="form-control" type="radio" name="player2" id="rock2"/>
+                                    <label class="label" for="rock2"><img src="~/img/rock.png"></label>
+                                    <input class="" type="radio" name="player2" id="paper2" />
+                                    <label class="label" for="paper2"><img src="~/img/paper.png"></label>
+                                    <input class="" type="radio" name="player2" id="scissors2" />
+                                    <label class="label" for="scissors2"><img src="~/img/scissors.png"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-10">
+                    <span class="input-group-btn ml-12 float-right">
+                        <button class="btn btn-success" style="margin-top:28px;" type="button" id="btnAdd">+</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ml-4">
+            <div class="col-md-1"></div>
+            <div class="card mb-4 col-md-9" style="background-color:#4c4a4a; color: white">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="tblTournament" >
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Ação</th>
+                                <th scope="col">VS</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody> </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ml-4">
+            <div class="col-md-1"></div>
+            <div class="card mb-4 align-items-center col-md-9" style="background-color: black">
+                <div class="card-body ">
+                    <button class="btn btn-success" id="btnPlay">Combate</button>
+                    <a role="button" href="~/option" class="btn btn-danger"> Voltar</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    <script src="~/scripts/tournament/tournament.js"></script>
+}

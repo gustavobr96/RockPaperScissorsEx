@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/shared/options.cshtml";
+}
+<link rel="stylesheet" href="~/css/props.css" />
+<div class="row">
+    <div class="col-md-6">
+        <div class="text-white" style="text-align:center;">WrongNumberOfPlayersError: <div class="text-white" style="text-align:center;" id="ValWrong">0</div></div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="text-white"  style="text-align:center;">NoSuchStrategyError:<div class="text-white" style="text-align:center;" id="valNo">0</div></div>
+        
+    </div>
+</div>
+<div>
+    <div class="row" >
+        <div class="col-md-6">
+            <div class="card mb-4 player">
+                <div class="card-header bg-white"><b>JOGADOR 1 </b></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-md-7">
+                            <label>Nome</label>
+                            <input class="form-control" type="text" id="txtname1" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Opção</label>
+                            <input class="form-control" type="radio" name="p1" id="rock1" />
+                            <label class="label" for="rock1"><img src="~/img/rock.png"></label>
+                            <input class="" type="radio" name="p1" id="paper1" />
+                            <label class="label" for="paper1"><img src="~/img/paper.png"></label>
+                            <input class="" type="radio" name="p1" id="scissors1"/>
+                            <label class="label" for="scissors1"><img src="~/img/scissors.png"></label>
+                            <input type="hidden" id="act1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4 player">
+                <div class="card-header bg-white"><b>JOGADOR 2</b></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-md-7">
+                            <label>Nome</label>
+                            <input class="form-control" type="text" id="txtname2" style="float:right;" />
+                        </div>
+                        <div class="form-group col-md-6 float-left">
+                            <label>Opção</label>
+                            <input class="form-control" type="radio" name="p2" id="rock2" />
+                            <label class="label" for="rock2"><img src="~/img/rock.png" alt=""></label>
+                            <input class="" type="radio" name="p2" id="paper2" />
+                            <label class="label" for="paper2"><img src="~/img/paper.png" alt=""></label>
+                            <input class="" type="radio" name="player2" id="scissors2" />
+                            <label class="label" for="scissors2"><img src="~/img/scissors.png" alt=""></label>
+                            <input type="hidden" id="act2" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row ml-12">
+    <div class="col-md-1"></div>
+    <div class="card mb-4 align-items-center col-md-9" style="background-color:black">
+        <div>
+            <button class="btn btn-success" id="btnBattle">Combate</button>
+            <a role="button" href="~/Option" class="btn btn-danger"> Voltar</a>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/scripts/battle/battle.js"></script>
+
+}
